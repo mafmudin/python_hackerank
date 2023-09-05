@@ -1,10 +1,10 @@
 def permutation(x,y,z,n):
 	hasil = []
-	for x in range(0, n+1):
-		for y in range(0, n+1):
-			for z in range(0, n+1):
-				if x <= y <= z and x+y+z <=n:
-					hasil.append((x,y,z))
+	for x in range(0, x+1):
+		for y in range(0, y+1):
+			for z in range(0, z+1):
+				if x+y+z != n:
+					hasil.append([x,y,z])
 	return hasil
 	
 def main():
@@ -13,10 +13,7 @@ def main():
 	z = int(input())
 	n = int(input())
 
-	permutations = permutation(x,y,z,n)
-
-	for permutation in permutations:
-		print(permutation)
+	print(permutation(x,y,z,n))
 
 
 main()
