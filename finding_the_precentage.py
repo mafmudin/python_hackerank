@@ -6,10 +6,10 @@ for _ in range(n):
     student_marks[name] = scores
 query_name = input()
 
-sum = 0
+list_sum = 0
 for i in student_marks[query_name]:
-    sum += i
+    list_sum += i
 
-avg = sum / len(student_marks[query_name])
+avg = list_sum / len(student_marks[query_name])
 print(f"{avg:.2f}")
         
